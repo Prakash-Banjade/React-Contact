@@ -76,10 +76,11 @@ export default function App() {
   const handleEdit = async (id) =>{
     const updatedContact = {
       id,
-      firstName,
-      lastName,
-      email,
-      jobType : jobType
+      firstName : firstName,
+      lastName : lastName ,
+      email : email,
+      acceptedTerms,
+      jobType
     }
     try{
       const response = await Api.put(`/Edit/${id}`,updatedContact)
