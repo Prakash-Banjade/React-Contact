@@ -77,7 +77,7 @@ export default function App() {
     e.preventDefault();
     // check if the contact exists before updating
     const foundContact = await Api.get(`/users/${data.id}`);
-    if (!foundContact) return console.error('No contact found with id: ', data.id) // or some custom error UI
+    if (!foundContact) return console.error('No contact found with id: ', data.id) // or some custom error UI message
     const {id} = foundContact.data
     const updatedContact = {
       ...foundContact.data,
