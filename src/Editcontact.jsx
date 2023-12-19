@@ -43,7 +43,7 @@ function Editcontact({contact , handleEdit,email ,setEmail , firstName, setFirst
         onChange={(e) => setEmail(e.target.value)}
         placeholder='Edit your email'
         />
-        <button className='submit' type='submit' onClick={()=>handleEdit(Newcontact.id)}>
+        <button className='submit' type='submit' onClick={(e)=>handleEdit(e, {id: Newcontact.id, firstName, lastName, email })}>
             Save Edit
         </button>
     </form>

@@ -73,17 +73,19 @@ export default function App() {
    }
   }
 
-  const handleEdit = async (id) =>{
+  const handleEdit = async (e, data) =>{
+    e.preventDefault();
+    // check if the contact exists before updating
+    const foundContact = await Api.get(`/users/${data.id}`);
+    if (!foundContact) return console.error('No contact found with id: ', data.id) // or some custom error UI
+    const {id} = foundContact.data
     const updatedContact = {
-      id,
-      firstName : firstName,
-      lastName : lastName ,
-      email : email,
-      acceptedTerms,
-      jobType
+      ...foundContact.data,
+      ...data
     }
+    console.log(updatedContact)
     try{
-      const response = await Api.put(`/Edit/${id}`,updatedContact)
+      const response = await Api.put(`/users/${id}`,updatedContact)
       setContact(contact.map(con => con.id === id ? {...response.data} : con))
       setFirstName('')
       setLastName('')
@@ -91,7 +93,7 @@ export default function App() {
       navigate('/')
       console.log('edited')
     }catch(err){
-      console.log(`Error`)
+      console.log(err)
     }
   }
 
