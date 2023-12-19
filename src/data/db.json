@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "firstName": "somu",
+      "lastName": "sartungi",
+      "email": "admin@gmail.com",
+      "acceptedTerms": true,
+      "jobType": "designer",
+      "id": 1
+    },
+    {
+      "firstName": "somu",
+      "lastName": "sartungi",
+      "email": "sabitrakunwar512@gmail.com",
+      "acceptedTerms": true,
+      "jobType": "developer",
+      "id": 2
+    }
+  ]
+}

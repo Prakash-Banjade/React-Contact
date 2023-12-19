@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input{
+    border: 1px solid black;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.basicform{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.submit{
+    background-color: brown;
+    padding: 10px;
+    color: whitesmoke;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+nav button{
+    border: 1px solid black;
+    padding: 10px;
+}
+button:disabled{
+    opacity: .5;
+}
+.my-select{
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+*{
+    box-sizing: border-box;
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 100vh;
+}
+.Card{
+    padding: 20px;
+    background-color: lightcoral;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+}
+/* Add this to your styles */
+.active {
+    background-color: #000;
+    color: #fff;
+  }
